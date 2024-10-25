@@ -14,5 +14,7 @@ fun MathReferenceNavigationGraph(){
     {
         composable(Routes.LOGIN_SCREEN){ LoginScreen(navController) }
         composable(Routes.REGISTER_SCREEN){ RegisterScreen(navController) }
+        composable(Routes.REGISTER_SUCCESS_SCREEN){ RegisterSuccessScreen(navController) }
+        composable(Routes.HOME_SCREEN){ HomeScreen(navController) }
     }
 }

@@ -11,8 +11,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import br.com.astradev.mathreferenceapp.R
 import br.com.astradev.mathreferenceapp.ui.theme.PrimaryLight
+import br.com.astradev.mathreferenceapp.ui.theme.mathreferenceappTheme
 
 @Composable
 fun MainBackground(){
@@ -39,5 +41,26 @@ fun MainBackground(){
             modifier = Modifier
                 .fillMaxWidth()
         )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun MainBackgroundPreview(){
+    mathreferenceappTheme {
+        MainBackground()
+    }
+}
+
+@Composable
+fun HomeBackground(){
+    Box(Modifier.fillMaxSize().background(PrimaryLight))
+}
+
+@Preview(showBackground = true)
+@Composable
+fun HomeBackgroundPreview(){
+    mathreferenceappTheme {
+        HomeBackground()
     }
 }

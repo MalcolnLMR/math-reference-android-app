@@ -53,7 +53,7 @@ fun RegisterScreen(navController: NavController){
             Spacer(modifier = Modifier.size(spacerSize))
             NormalTextField(placeHolder = "confirmar senha")
             Spacer(modifier = Modifier.size(confirmSpacerSize))
-            AccentButton("Cadastrar") { }
+            AccentButton("Cadastrar") { navController.navigate(Routes.REGISTER_SUCCESS_SCREEN) }
         }
     }
 
