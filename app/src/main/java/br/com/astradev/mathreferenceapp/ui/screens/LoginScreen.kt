@@ -26,6 +26,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import br.com.astradev.mathreferenceapp.R
 import br.com.astradev.mathreferenceapp.ui.components.AccentButton
+import br.com.astradev.mathreferenceapp.ui.components.MainBackground
 import br.com.astradev.mathreferenceapp.ui.components.NormalTextField
 import br.com.astradev.mathreferenceapp.ui.screens.objects.Routes
 import br.com.astradev.mathreferenceapp.ui.theme.BaseLight
@@ -34,33 +35,10 @@ import br.com.astradev.mathreferenceapp.ui.theme.mathreferenceappTheme
 
 @Composable
 fun LoginScreen(navController: NavController){
+    val spacerSize = 30.dp
+    val confirmSpacerSize = 50.dp
 
-    Box(Modifier.fillMaxSize().background(PrimaryLight))
-
-    Image(
-        painterResource(R.drawable.bg_art_top),
-        contentDescription = "",
-        contentScale = ContentScale.Crop,
-        modifier = Modifier
-            .fillMaxWidth()
-    )
-
-    Row(
-        verticalAlignment = Alignment.Bottom,
-        modifier = Modifier.fillMaxSize()
-    )
-    {
-        Image(
-            painterResource(R.drawable.bg_art_bottom),
-            contentDescription = "",
-            contentScale = ContentScale.Crop,
-
-            modifier = Modifier
-                .fillMaxWidth()
-        )
-    }
-
-
+    MainBackground()
 
     Column (
         verticalArrangement = Arrangement.Center,
@@ -68,8 +46,6 @@ fun LoginScreen(navController: NavController){
         modifier = Modifier
             .fillMaxSize()
     ){
-
-
         Column(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -79,19 +55,17 @@ fun LoginScreen(navController: NavController){
         )
         {
             NormalTextField(placeHolder = "email")
-            Spacer(modifier = Modifier.size(50.dp))
+            Spacer(modifier = Modifier.size(spacerSize))
             NormalTextField(placeHolder = "senha")
-            Spacer(modifier = Modifier.size(50.dp))
+            Spacer(modifier = Modifier.size(confirmSpacerSize))
             AccentButton("Entrar") { }
         }
     }
 
-
-
     AccentButton(
         text = "Cadastrar",
         onClick = { navController.navigate(Routes.REGISTER_SCREEN) },
-        modifier = Modifier.offset(10.dp, 10.dp)
+        modifier = Modifier.offset(10.dp, 30.dp)
     )
 }
 
