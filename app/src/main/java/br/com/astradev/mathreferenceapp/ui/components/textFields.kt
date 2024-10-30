@@ -20,12 +20,13 @@ import br.com.astradev.mathreferenceapp.ui.theme.White
 import br.com.astradev.mathreferenceapp.ui.theme.mathreferenceappTheme
 
 @Composable
-fun NormalTextField(placeHolder: String, modifier: Modifier = Modifier){
+fun NormalTextField(placeHolder: String, modifier: Modifier = Modifier, value: String = ""){
+    var _value = value
     TextField(
+        value = _value,
         modifier = modifier
             .clip(RoundedCornerShape(10.dp)),
         placeholder = { Text(placeHolder, color = Black50) },
-        value = "",
         colors = TextFieldDefaults.colors(
             unfocusedTextColor = Black,
             focusedTextColor = Black,
@@ -35,7 +36,7 @@ fun NormalTextField(placeHolder: String, modifier: Modifier = Modifier){
             focusedContainerColor = White
 
         ),
-        onValueChange = {}
+        onValueChange = { _value = it }
     )
 }
 
