@@ -27,7 +27,7 @@ import br.com.astradev.mathreferenceapp.ui.theme.mathreferenceappTheme
 fun ProfileScreen(navController: NavController) {
     Scaffold(
         topBar = { HomeTopBar("Perfil") },
-        bottomBar = { HomeBottomBar(rememberNavController()) }
+        bottomBar = { HomeBottomBar(navController, 2) }
     ) {
         HomeBackground()
         Column (

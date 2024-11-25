@@ -143,10 +143,7 @@ fun BottomBarIconView(
 }
 
 @Composable
-fun HomeBottomBar(navController: NavController){
-    var selectedBarIndex by rememberSaveable {
-        mutableIntStateOf(1)
-    }
+fun HomeBottomBar(navController: NavController, selectedIndex: Int){
 
     val homeItem = BottomBarItem(
         title = "Home",
@@ -193,14 +190,13 @@ fun HomeBottomBar(navController: NavController){
                 modifier = Modifier
                     .background(AccentLight, RoundedCornerShape(30.dp))
                     .width(10.dp).height(60.dp),
-                selected = selectedBarIndex == index,
+                selected = selectedIndex == index,
                 onClick = {
-                    selectedBarIndex = index
                     navController.navigate(bottomBarItem.navigationRoute)
                 },
                 icon = {
                     BottomBarIconView(
-                        isSelected = selectedBarIndex == index,
+                        isSelected = selectedIndex == index,
                         selectedIcon = bottomBarItem.selectedIcon,
                         unselectedIcon = bottomBarItem.unselectedIcon,
                         title = bottomBarItem.title
@@ -218,7 +214,7 @@ fun BarWithBackground(){
     mathreferenceappTheme {
         Scaffold(
             topBar = { HomeTopBar("Preview") },
-            bottomBar = { HomeBottomBar(rememberNavController()) }
+            bottomBar = { HomeBottomBar(rememberNavController(), 1) }
         ) {
             HomeBackground()
 

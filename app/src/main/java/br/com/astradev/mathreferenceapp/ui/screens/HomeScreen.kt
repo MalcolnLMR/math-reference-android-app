@@ -29,7 +29,7 @@ import br.com.astradev.mathreferenceapp.ui.theme.mathreferenceappTheme
 fun HomeScreen(navController: NavController) {
     Scaffold(
         topBar = { HomeTopBar("Home") },
-        bottomBar = { HomeBottomBar(rememberNavController()) }
+        bottomBar = { HomeBottomBar(navController, 1) }
     ) {
         HomeBackground()
         Column(

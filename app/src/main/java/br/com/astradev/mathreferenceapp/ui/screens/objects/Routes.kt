@@ -9,5 +9,6 @@ object Routes {
     const val TOS_SCREEN = "TOS_SCREEN"
     const val LOGOUT_SCREEN = "LOGOUT_SCREEN"
     const val PROFILE_SCREEN = "PROFILE_SCREEN"
+    const val START_SCREEN = "START_SCREEN"
 
 }
