@@ -41,7 +41,7 @@ fun GeometryTable(tableData: List<Triple<String, String, () -> Double>>) {
         modifier = Modifier
             .fillMaxWidth()
             .verticalScroll(rememberScrollState())
-            .padding(16.dp)
+            //.padding(16.dp)
     ) {
         TableHeader()
         Spacer(modifier = Modifier.height(1.dp))
@@ -134,7 +134,11 @@ fun TablePreview(){
                     Triple("Círculo", "π × r²") {
                         val result = Math.PI * (2.0.pow(2.0))
                         result
-                    }
+                    },
+                    Triple("Circunferência", "π × r²") {
+                    val result = Math.PI * (2.0.pow(2.0))
+                    result
+                }
                 )
             )
         }
