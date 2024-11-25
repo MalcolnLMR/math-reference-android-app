@@ -78,7 +78,6 @@ fun CircleScreen(navController: NavController) {
                 value = radiusText,
                 modifier = Modifier
                     .clip(RoundedCornerShape(10.dp)),
-                placeholder = { Text("Raio", color = Black50) },
                 colors = TextFieldDefaults.colors(
                     unfocusedTextColor = Black,
                     focusedTextColor = Black,
@@ -88,7 +87,7 @@ fun CircleScreen(navController: NavController) {
                     focusedContainerColor = White
                 ),
                 onValueChange = { radiusText = it },
-                label = { Text("Raio", color = White) }
+                label = { Text("Raio (r)", color = White) }
             )
 
             Spacer(Modifier.size(20.dp))
