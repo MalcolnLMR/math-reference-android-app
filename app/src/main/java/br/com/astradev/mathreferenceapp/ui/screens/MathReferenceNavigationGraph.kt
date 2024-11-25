@@ -5,6 +5,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import br.com.astradev.mathreferenceapp.ui.screens.geometry.CircleScreen
+import br.com.astradev.mathreferenceapp.ui.screens.geometry.SphereScreen
+import br.com.astradev.mathreferenceapp.ui.screens.geometry.SquareScreen
 import br.com.astradev.mathreferenceapp.ui.screens.objects.Routes
 
 @Composable
@@ -23,9 +25,9 @@ fun MathReferenceNavigationGraph(){
         composable(Routes.PROFILE_SCREEN) { ProfileScreen(navController) }
 
         composable(Routes.CIRCLE_SCREEN) { CircleScreen(navController) }
-        composable(Routes.SPHERE_SCREEN) {  }
+        composable(Routes.SPHERE_SCREEN) { SphereScreen(navController) }
 
-        composable(Routes.SQUARE_SCREEN) {  }
+        composable(Routes.SQUARE_SCREEN) { SquareScreen(navController) }
         composable(Routes.CUBE_SCREEN) {  }
 
         composable(Routes.RECTANGLE_SCREEN) {  }
