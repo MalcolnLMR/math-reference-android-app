@@ -11,4 +11,18 @@ object Routes {
     const val PROFILE_SCREEN = "PROFILE_SCREEN"
     const val START_SCREEN = "START_SCREEN"
 
+    // Geometry routes 2d
+
+    const val CIRCLE_SCREEN = "CIRCLE_SCREEN"
+    const val SQUARE_SCREEN = "SQUARE_SCREEN"
+    const val RECTANGLE_SCREEN = "RECTANGLE_SCREEN"
+    const val TRIANGLE_SCREEN = "TRIANGLE_SCREEN"
+
+    // Geometry routes 3d
+
+    const val SPHERE_SCREEN = "SPHERE_SCREEN"
+    const val CUBE_SCREEN = "CUBE_SCREEN"
+    const val RHOMBOID_SCREEN = "RHOMBOID_SCREEN"
+    const val PYRAMID_SCREEN = "PYRAMID_SCREEN"
+
 }

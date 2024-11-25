@@ -22,6 +22,7 @@ import br.com.astradev.mathreferenceapp.ui.components.HomeBottomBar
 import br.com.astradev.mathreferenceapp.ui.components.HomeTopBar
 import br.com.astradev.mathreferenceapp.ui.components.MainBackground
 import br.com.astradev.mathreferenceapp.ui.components.ShapeButton
+import br.com.astradev.mathreferenceapp.ui.screens.objects.Routes
 import br.com.astradev.mathreferenceapp.ui.theme.mathreferenceappTheme
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -50,7 +51,7 @@ fun HomeScreen(navController: NavController) {
                     ShapeButton(
                         text = "Cubo",
                         icon = R.drawable.cube,
-                        onClick = {}
+                        onClick = { navController.navigate(Routes.CIRCLE_SCREEN) }
                     )
 
                     ShapeButton(
