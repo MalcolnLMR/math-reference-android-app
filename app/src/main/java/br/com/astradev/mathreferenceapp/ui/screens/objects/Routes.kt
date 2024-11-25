@@ -6,5 +6,8 @@ object Routes {
     const val REGISTER_SCREEN = "REGISTER_SCREEN"
     const val REGISTER_SUCCESS_SCREEN = "REGISTER_SUCCESS_SCREEN"
     const val HOME_SCREEN = "HOME_SCREEN"
+    const val TOS_SCREEN = "TOS_SCREEN"
+    const val LOGOUT_SCREEN = "LOGOUT_SCREEN"
+    const val PROFILE_SCREEN = "PROFILE_SCREEN"
 
 }
