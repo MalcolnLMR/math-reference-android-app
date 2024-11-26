@@ -23,7 +23,7 @@ fun MathReferenceNavigationGraph(){
         composable(Routes.REGISTER_SCREEN){ RegisterScreen(navController) }
         composable(Routes.REGISTER_SUCCESS_SCREEN){ RegisterSuccessScreen(navController) }
         composable(Routes.HOME_SCREEN){ HomeScreen(navController) }
-        composable(Routes.LOGOUT_SCREEN) { LoginScreen(navController) } // volta pro login
+        composable(Routes.LOGOUT_SCREEN) { StartScreen(navController) } // volta pro login
         composable(Routes.TOS_SCREEN) { ToSScreen(navController) }
         composable(Routes.PROFILE_SCREEN) { ProfileScreen(navController) }
 
