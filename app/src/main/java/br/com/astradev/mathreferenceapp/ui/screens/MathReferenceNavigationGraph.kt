@@ -5,6 +5,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import br.com.astradev.mathreferenceapp.ui.screens.geometry.CircleScreen
+import br.com.astradev.mathreferenceapp.ui.screens.geometry.CubeScreen
+import br.com.astradev.mathreferenceapp.ui.screens.geometry.RectangleScreen
+import br.com.astradev.mathreferenceapp.ui.screens.geometry.RhomboidScreen
 import br.com.astradev.mathreferenceapp.ui.screens.geometry.SphereScreen
 import br.com.astradev.mathreferenceapp.ui.screens.geometry.SquareScreen
 import br.com.astradev.mathreferenceapp.ui.screens.objects.Routes
@@ -28,12 +31,12 @@ fun MathReferenceNavigationGraph(){
         composable(Routes.SPHERE_SCREEN) { SphereScreen(navController) }
 
         composable(Routes.SQUARE_SCREEN) { SquareScreen(navController) }
-        composable(Routes.CUBE_SCREEN) {  }
+        composable(Routes.CUBE_SCREEN) { CubeScreen(navController) }
 
-        composable(Routes.RECTANGLE_SCREEN) {  }
-        composable(Routes.RHOMBOID_SCREEN) {  }
+        composable(Routes.RECTANGLE_SCREEN) { RectangleScreen(navController) }
+        composable(Routes.RHOMBOID_SCREEN) { RhomboidScreen(navController) }
 
-        composable(Routes.TRIANGLE_SCREEN) {  }
-        composable(Routes.PYRAMID_SCREEN) {  }
+        composable(Routes.TRIANGLE_SCREEN) {  } // todo
+        composable(Routes.PYRAMID_SCREEN) {  } // todo
     }
 }

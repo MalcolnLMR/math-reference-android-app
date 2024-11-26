@@ -134,3 +134,55 @@ fun ShapeButtonPreview(){
         )
     }
 }
+
+@Composable
+fun ShapeButtonWithoutIcon(
+    text: String,
+    textColor: Color = Black,
+    backgroundColor: Color = BaseLight,
+    roundedRadius: Dp = 10.dp,
+    onClick: () -> Unit
+) {
+    Box(
+        modifier = Modifier.size(160.dp),
+        contentAlignment = Alignment.Center
+    ){
+        Box(
+            modifier = Modifier
+                .width(150.dp)
+                .height(50.dp)
+                .background(backgroundColor, RoundedCornerShape(roundedRadius))
+                .clickable { onClick() },
+            contentAlignment = Alignment.Center
+        ){}
+
+        Box() {
+            Box(
+                modifier = Modifier
+                    .width(160.dp)
+                    .height(30.dp)
+                    .background(AccentLight, RoundedCornerShape(8.dp)),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text,
+                    color = textColor,
+                    textAlign = TextAlign.Center
+                )
+            }
+        }
+    }
+
+}
+
+
+@Preview(showBackground = true)
+@Composable
+fun ShapeButtonWithoutIconPreview(){
+    mathreferenceappTheme {
+        ShapeButtonWithoutIcon(
+            text = "Cubo",
+            onClick = {}
+        )
+    }
+}

@@ -22,6 +22,8 @@ import br.com.astradev.mathreferenceapp.ui.components.HomeBottomBar
 import br.com.astradev.mathreferenceapp.ui.components.HomeTopBar
 import br.com.astradev.mathreferenceapp.ui.components.MainBackground
 import br.com.astradev.mathreferenceapp.ui.components.ShapeButton
+import br.com.astradev.mathreferenceapp.ui.components.ShapeButtonWithoutIcon
+import br.com.astradev.mathreferenceapp.ui.components.ShapeButtonWithoutIconPreview
 import br.com.astradev.mathreferenceapp.ui.screens.objects.Routes
 import br.com.astradev.mathreferenceapp.ui.theme.mathreferenceappTheme
 
@@ -48,16 +50,14 @@ fun HomeScreen(navController: NavController) {
                         .fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
-                    ShapeButton(
-                        text = "Cubo",
-                        icon = R.drawable.cube,
+                    ShapeButtonWithoutIcon(
+                        text = "Circulo",
                         onClick = { navController.navigate(Routes.CIRCLE_SCREEN) }
                     )
 
-                    ShapeButton(
-                        text = "Losango",
-                        icon = R.drawable.rhombus,
-                        onClick = {}
+                    ShapeButtonWithoutIcon(
+                        text = "Esfera",
+                        onClick = { navController.navigate(Routes.SPHERE_SCREEN) }
                     )
                 }
 
@@ -67,16 +67,14 @@ fun HomeScreen(navController: NavController) {
                         .fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
-                    ShapeButton(
-                        text = "Romboedro",
-                        icon = R.drawable.rhombuzoid,
-                        onClick = {}
+                    ShapeButtonWithoutIcon(
+                        text = "Quadrado",
+                        onClick = { navController.navigate(Routes.SQUARE_SCREEN) }
                     )
 
-                    ShapeButton(
-                        text = "Esfera",
-                        icon = R.drawable.sphere,
-                        onClick = {}
+                    ShapeButtonWithoutIcon(
+                        text = "Cubo",
+                        onClick = { navController.navigate(Routes.CUBE_SCREEN) }
                     )
                 }
 
@@ -86,10 +84,14 @@ fun HomeScreen(navController: NavController) {
                         .fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
-                    ShapeButton(
-                        text = "Trapézio",
-                        icon = R.drawable.trapezoid,
-                        onClick = {}
+                    ShapeButtonWithoutIcon(
+                        text = "Retângulo",
+                        onClick = { navController.navigate(Routes.RECTANGLE_SCREEN) }
+                    )
+
+                    ShapeButtonWithoutIcon(
+                        text = "Paralelepipedo",
+                        onClick = { navController.navigate(Routes.RHOMBOID_SCREEN) }
                     )
                 }
 
